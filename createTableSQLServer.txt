@@ -1,0 +1,6 @@
+CREATE TABLE Images (
+    id INT IDENTITY(1,1) PRIMARY KEY,
+    filename NVARCHAR(255) NOT NULL,            -- tên hoặc đường dẫn file ảnh
+    feature_vector NVARCHAR(MAX) NOT NULL,      -- vector đặc trưng dạng chuỗi (ví dụ: "0.12,0.54,...")
+    created_at DATETIME DEFAULT GETDATE()       -- thời gian thêm vào hệ thống
+);
